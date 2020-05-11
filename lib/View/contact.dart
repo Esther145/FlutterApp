@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class Mylist extends StatelessWidget {
   var data=[
     {"name":"Finn Wittrock","age":35,"image":"images/finn.png"},{"name":"Wes Bentley" ,"age":41,"image":"images/wes.png"},{"name":"Evan Peters","age":33,"image":"images/evan.png"},
-    {"name":"Matt Bomer","age":41,"image":"images/matt.png"},
+    {"name":"Matt Bomer","age":41,"image":"images/matt.png"},{"name":"Lady Gaga","age":34,"image":"images/gaga.png"},
 
 
 
