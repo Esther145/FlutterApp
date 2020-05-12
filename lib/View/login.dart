@@ -1,8 +1,13 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/View/contact.dart';
+import 'package:flutterapp/View/counter.dart';
 
 class MyLog extends StatelessWidget {
+  TextEditingController username=TextEditingController();
+  TextEditingController password=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
@@ -16,6 +21,7 @@ class MyLog extends StatelessWidget {
             children: <Widget>[
               //Text("Username"),
               TextField(
+                controller: username,
                 decoration: InputDecoration(prefixIcon: Icon(Icons.perm_identity),
                      border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15.0)
@@ -26,6 +32,7 @@ class MyLog extends StatelessWidget {
               ),
               //Text("Password"),
               TextField(
+                controller: password,
                 decoration: InputDecoration( prefixIcon: Icon(Icons.lock_outline),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15.0)
@@ -39,10 +46,16 @@ class MyLog extends StatelessWidget {
 
                   onTap: ()
                   {
+                    var getusername=username.text;
+                    var getpass=password.text;
+                  if(getusername=="admin" && getpass=="12345")
+                    {
+
                     Navigator.push(context, MaterialPageRoute(
-                        builder:(context)=>Mylist()
+                    builder:(context)=>MyCounterApp()
 
                     ));
+                    };
                   },
 
                 child: Container(
